@@ -74,7 +74,6 @@
 			this.HueStartBar.Size = new System.Drawing.Size(285, 36);
 			this.HueStartBar.TabIndex = 2;
 			this.HueStartBar.TickStyle = System.Windows.Forms.TickStyle.None;
-			this.HueStartBar.Value = 100;
 			this.HueStartBar.Scroll += new System.EventHandler(this.HueStartBar_Scroll);
 			// 
 			// HueEndBar
@@ -89,7 +88,6 @@
 			this.HueEndBar.Size = new System.Drawing.Size(285, 36);
 			this.HueEndBar.TabIndex = 5;
 			this.HueEndBar.TickStyle = System.Windows.Forms.TickStyle.None;
-			this.HueEndBar.Value = 100;
 			this.HueEndBar.Scroll += new System.EventHandler(this.HueEndBar_Scroll);
 			// 
 			// label2

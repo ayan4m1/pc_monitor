@@ -63,7 +63,6 @@ namespace EspMon
 			// 
 			// UpdateTimer
 			// 
-			this.UpdateTimer.Enabled = true;
 			this.UpdateTimer.Tick += new System.EventHandler(this.UpdateTimer_Tick);
 			// 
 			// Notify
@@ -82,6 +81,7 @@ namespace EspMon
 			this.StartedCheckBox.TabIndex = 3;
 			this.StartedCheckBox.Text = "Started";
 			this.StartedCheckBox.UseVisualStyleBackColor = true;
+			this.StartedCheckBox.CheckedChanged += new System.EventHandler(this.StartedCheckBox_CheckedChanged);
 			// 
 			// label1
 			// 

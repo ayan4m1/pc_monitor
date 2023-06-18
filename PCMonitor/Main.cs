@@ -309,5 +309,32 @@ namespace EspMon
 			var frm = new EditLabel(int.Parse(b.Text),_computer);
 			frm.ShowDialog();
 		}
+
+		private void StartedCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			if(!StartedCheckBox.Checked)
+			{
+				int i = 0;
+				foreach (PortData pdata in PortBox.Items)
+				{
+					var port = pdata.Port;
+					// if it's checked
+					if (PortBox.GetItemChecked(i))
+					{
+						// make sure checked ports get closed
+						if (port.IsOpen)
+						{
+							try { port.Close(); } catch { }
+						}
+					}
+					++i;
+				}
+				UpdateTimer.Enabled = false;
+			} else
+			{
+				UpdateTimer.Enabled = true;
+			}
+		
+		}
 	}
 }
