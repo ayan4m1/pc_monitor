@@ -2,17 +2,12 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EspMon
 {
-	public partial class EditLabel : Form
+    public partial class EditLabel : Form
 	{
 		int _label;
 		Computer _computer;
@@ -21,6 +16,7 @@ namespace EspMon
 			_label = label;
 			_computer = computer;
 			InitializeComponent();
+			ValueTree.ImageList = IconContainer.Icons;
 			UpdateHueStartLabel();
 			UpdateHueEndLabel();
 			UpdateTree();
@@ -31,7 +27,7 @@ namespace EspMon
 			parent.Nodes.Clear();
 			foreach(var value in sensor.Values)
 			{
-				var newNode = parent.Nodes.Add(value.Value.ToString()+" "+sensor.SensorType.ToString());
+				var newNode = parent.Nodes.Add($"{value.Value} {sensor.SensorType}");
 				newNode.Tag = value;
 				newNode.EnsureVisible();
 			}
@@ -54,8 +50,9 @@ namespace EspMon
 			toRemove = null;
 			foreach (var sensor in hardware.Sensors)
 			{
-				var newNode = parent.Nodes.Add(sensor.Name+" "+sensor.Value.ToString());
+				var newNode = parent.Nodes.Add($"{sensor.Name} {sensor.Value}");
 				newNode.Tag = sensor;
+				newNode.ImageKey = sensor.SensorType.ToString().ToLower();
 				newNode.EnsureVisible();
 				UpdateSensorNode(newNode);
 
@@ -88,7 +85,7 @@ namespace EspMon
 			int hi = Convert.ToInt32(Math.Floor(hue / 60)) % 6;
 			double f = hue / 60 - Math.Floor(hue / 60);
 
-			value = value * 255;
+			value *= 255;
 			int v = Convert.ToInt32(value);
 			int p = Convert.ToInt32(value * (1 - saturation));
 			int q = Convert.ToInt32(value * (1 - f * saturation));

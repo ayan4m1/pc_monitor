@@ -56,6 +56,7 @@
     <Compile Include="EditLabel.Designer.cs">
       <DependentUpon>EditLabel.cs</DependentUpon>
     </Compile>
+    <Compile Include="IconContainer.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,7 +97,32 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\ati.png" />
+    <EmbeddedResource Include="Icons\barback.png" />
+    <EmbeddedResource Include="Icons\barblue.png" />
+    <EmbeddedResource Include="Icons\bigng.png" />
+    <EmbeddedResource Include="Icons\chip.png" />
+    <EmbeddedResource Include="Icons\clock.png" />
+    <EmbeddedResource Include="Icons\computer.png" />
+    <EmbeddedResource Include="Icons\control.png" />
+    <EmbeddedResource Include="Icons\cpu.png" />
+    <EmbeddedResource Include="Icons\data.png" />
+    <EmbeddedResource Include="Icons\factor.png" />
+    <EmbeddedResource Include="Icons\fan.png" />
+    <EmbeddedResource Include="Icons\flow.png" />
+    <EmbeddedResource Include="Icons\gadget.png" />
+    <EmbeddedResource Include="Icons\hdd.png" />
+    <EmbeddedResource Include="Icons\level.png" />
+    <EmbeddedResource Include="Icons\load.png" />
+    <EmbeddedResource Include="Icons\mainboard.png" />
+    <EmbeddedResource Include="Icons\nvidia.png" />
+    <EmbeddedResource Include="Icons\power.png" />
+    <EmbeddedResource Include="Icons\ram.png" />
+    <EmbeddedResource Include="Icons\temperature.png" />
+    <EmbeddedResource Include="Icons\throughput.png" />
+    <EmbeddedResource Include="Icons\voltage.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\openhardwaremonitor\OpenHardwareMonitorLib.csproj">
       <Project>{b0397530-545a-471d-bb74-027ae456df1a}</Project>
