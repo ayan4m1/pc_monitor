@@ -125,22 +125,26 @@ namespace EspMon
 				data.Top1Hue2 = 138;
 				data.TopValue1 = (int)cpuUsage;
 				data.TopValue1Max = 100;
+				data.TopValue1Div = 1;
 				data.TopUnit2 = 'C';
 				data.Top2Hue1 = 96;
 				data.Top2Hue2 = 0;
 				data.TopValue2 = (int)cpuTemp;
 				data.TopValue2Max = (int)cpuTjMax;
+				data.TopValue2Div = 1;
 				data.BottomTitle = "GPU";
 				data.BottomUnit1 = '%';
 				data.Bottom1Hue1 = 138;
 				data.Bottom1Hue2 = 138;
 				data.BottomValue1 = (int)gpuUsage;
 				data.BottomValue1Max = 100;
+				data.BottomValue1Div = 1;
 				data.BottomUnit2 = 'C';
 				data.Bottom2Hue1 = 96;
 				data.Bottom2Hue2 = 0;
 				data.BottomValue2 = (int)gpuTemp;
 				data.BottomValue2Max = (int)gpuTjMax;
+				data.BottomValue2Div = 1;
 				// go through all the ports
 				int i = 0;
 				foreach (PortData pdata in PortBox.Items)
